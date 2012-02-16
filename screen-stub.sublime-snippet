@@ -1,0 +1,65 @@
+<snippet>
+	<content><![CDATA[
+/// Copyright (c) 2012 {copyright_owner}
+/// All rights reserved.
+/// {summary}
+/// File by Adam Harte
+
+include_once 'paint/system/paint_button.u'
+include_once 'app/widgets/window_background.u'
+
+
+define group a_$1_screen
+	
+	.visible = 0
+
+
+
+	/// <summary> Fullscreen image for window background </summary>
+	instance bb_window_background background
+	end
+
+
+
+	method init()
+		.refresh_layout()
+	end
+	
+
+	method show()
+		.refresh_layout(1)
+		.visible = 1
+	end
+
+	method hide()
+		.visible = 0
+		main_window.refresh_avatar_bar()
+	end
+
+	///<summary> Repositions the GUI objects </summary>
+	method refresh_layout()
+		.refresh_layout(0)
+	end
+
+	///<summary> Repositions the GUI objects </summary>
+	method refresh_layout(bool force)
+		if .visible || force
+			.width = window.width
+			.height = window.height
+
+			int edge_padding_x = 35
+			int edge_padding_y = 26
+
+		end
+	end
+
+
+end
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.umajin</scope>
+	<description>Screen Stub</description>
+</snippet>

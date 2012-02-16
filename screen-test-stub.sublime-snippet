@@ -1,0 +1,79 @@
+<snippet>
+	<content><![CDATA[
+/// Copyright (c) 2012 \${copyright_owner}
+/// All rights reserved.
+/// \${summary}
+/// File by Adam Harte
+
+include_once 'app/widgets/${1:stub}_screen.u'
+
+
+instance unit_test ${1:stub}_screen_test
+	
+	.name = '${1:stub} screen'
+
+	/// <summary> Test the ${1:stub} screen object exists </summary>
+	method test_exists()
+		bool exists = 0
+
+		instance a_${1:stub}_screen test_${1:stub}_screen
+			exists = 1
+		end
+
+		.assert(exists, '- ${1:stub} Screen exists')
+
+		delete test_${1:stub}_screen
+	end
+
+	method test_default_properties()
+		instance a_${1:stub}_screen test_${1:stub}_screen
+		end
+
+		.assert(test_${1:stub}_screen.visible == 0, '- ${1:stub} screen visibility')
+		test_${1:stub}_screen.init()
+		.assert(test_${1:stub}_screen.visible == 0, '- ${1:stub} screen visibility')
+		test_${1:stub}_screen.show()
+		.assert(test_${1:stub}_screen.visible, '- ${1:stub} screen visibility')
+
+		delete test_${1:stub}_screen
+	end
+
+	method test_opening_twice()
+		// Setup ${1:stub} screen.
+		instance a_${1:stub}_screen test_${1:stub}_screen
+		end
+		test_${1:stub}_screen.init()
+		.assert(test_${1:stub}_screen.visible == 0, '- ${1:stub} screen visibility')
+
+		int i = 0
+		loop i < 3
+			test_${1:stub}_screen.show()
+			.assert(test_${1:stub}_screen.visible, '- ${1:stub} screen visibility')
+			test_${1:stub}_screen.hide()
+			.assert(test_${1:stub}_screen.visible == 0, '- ${1:stub} screen visibility')
+
+			i++
+		end
+
+		delete test_${1:stub}_screen
+	end
+
+
+
+	method run_all_tests()
+		.test_exists()
+		.test_default_properties()
+		.test_opening_twice()
+
+	end
+end
+
+${1:stub}_screen_test.run_all_tests()
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.umajin</scope>
+	<description>Screen Test Stub</description>
+</snippet>

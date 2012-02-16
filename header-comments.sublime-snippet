@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+/// Copyright (c) 2012 \${copyright_owner}
+/// All rights reserved.
+/// \${summary}
+/// File by Adam Harte
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<!-- <tabTrigger>hello</tabTrigger> -->
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.umajin</scope>
+	<description>Header comments</description>
+</snippet>
