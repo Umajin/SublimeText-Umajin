@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>u</string>
+	</array>
+	<key>foldingStartMarker</key>
+	<string>(/\*|\{\s*$)</string>
+	<key>foldingStopMarker</key>
+	<string>(\*\*/|^\s*\})</string>
+	<key>name</key>
+	<string>Umajin</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>comment</key>
+			<string>everything being a reserved word, not a value and needing a 'end' is a..</string>
+			<key>match</key>
+			<string>\b(define|instance|include|include_once|method|return|returns|if|else|elseif|loop|property|constant|end|event|raise|eval|delete|remove|tween|in)\b(?![?!])</string>
+			<key>name</key>
+			<string>keyword.control.umajin</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(int|int16|int32|int64|uint|uint8|uint16|uint32|uint64|real|real32|real64|float|bool|string|vec3|object)\b</string>
+			<key>name</key>
+			<string>storage.type.umajin</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(color|group|shape|visobj|timer_oneshot|timer_periodic|text_static_2d)\b</string>
+			<key>name</key>
+			<string>storage.type.umajin</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b(system|window)\b</string>
+			<key>name</key>
+			<string>constant.language.umajin</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(null)\b</string>
+			<key>name</key>
+			<string>constant.language.umajin</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>\b(g_)([a-zA-Z_]\w*)\s*</string>
+			<key>name</key>
+			<string>constant.language.umajin</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\b</string>
+			<key>name</key>
+			<string>constant.numeric.umajin</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(println|print)</string>
+			<key>name</key>
+			<string>support.function.formatted_print.umajin</string>
+		</dict>
+
+
+
+
+		<dict>
+			<key>match</key>
+			<string>\b(length|clear|dot_product|distance_squared|distance|keys|values|to_monochrome|to_grey_scale|to_gray_scale|to_sepia|format|now|now_gmt|year|month|day|hour|minute|second|weekday|yearday|date|time|today|today_gmt|time_t|time_t_gmt|normalize|concat|left|right|mid|trim|ltrim|rtrim|length|split|dsplit|join|instr|instrrev|replace|md5|crc32|save_as|save_string|save_unicode_string|save_binary_string|load|load_string|load_unicode_string|lorem_ipsum|json|quote|unquote|url_encode|url_decode|xml_encode|xml_decode|basename|dirname|extension|fullpath|encrypt|decrypt|inverse|is_infinity|is_nan|abs|sin|cos|tan|asin|acos|atan|atan2|exp|log|sign|sinh|cosh|tanh|lobyte|hibyte|loword|hiword|max|min|sum|is_online|message_box|sleep|to_radians|to_degrees|floor|ceil|round|rand|sqrt|pow|trim|instr|pos|lower|upper|split|#line_numbers|#no_line_numbers|typeof|nameof)\b</string>
+			<key>name</key>
+			<string>support.function.umajin</string>
+		</dict>
+
+
+
+		<dict>
+			<key>begin</key>
+			<string>"</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.umajin</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>"</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.umajin</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.double.umajin</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.umajin</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>'</string>
+			<key>beginCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.begin.umajin</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>'</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.string.end.umajin</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>string.quoted.single.umajin</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>\\.</string>
+					<key>name</key>
+					<string>constant.character.escape.umajin</string>
+				</dict>
+			</array>
+		</dict>
+
+		<dict>
+			<key>begin</key>
+			<string>/\*</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.umajin</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\*/</string>
+			<key>name</key>
+			<string>comment.block.umajin</string>
+		</dict>
+		<dict>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.comment.umajin</string>
+				</dict>
+			</dict>
+			<key>match</key>
+			<string>(//).*$\n?</string>
+			<key>name</key>
+			<string>comment.line.double-slash.umajin</string>
+		</dict>
+
+		<dict>
+			<key>match</key>
+			<string>[-!%&amp;&lt;&gt;*+=/\|]</string>
+			<key>name</key>
+			<string>keyword.operator.symbolic.umajin</string>
+		</dict>
+
+		<dict>
+			<key>begin</key>
+			<string>\b(method)\s+([a-zA-Z_]\w*)\s*(\()</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>storage.type.function.umajin</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.umajin</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.begin.umajin</string>
+				</dict>
+			</dict>
+			<key>end</key>
+			<string>\)</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>punctuation.definition.parameters.end.umajin</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.function.umajin</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>match</key>
+					<string>[^,)\n]+</string>
+					<key>name</key>
+					<string>variable.parameter.function.umajin</string>
+				</dict>
+			</array>
+		</dict>
+
+		
+		
+		
+
+
+	</array>
+	<key>scopeName</key>
+	<string>source.umajin</string>
+	<key>uuid</key>
+	<string>9029406f-49b9-44c5-824b-a09fed48aff8</string>
+</dict>
+</plist>
