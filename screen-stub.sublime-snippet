@@ -6,11 +6,13 @@
 /// File by Adam Harte
 
 include_once 'paint/system/paint_button.u'
+include_once 'app/widgets/screen.u'
 include_once 'app/widgets/window_background.u'
 
 
-define group a_$1_screen
+define bb_screen a_${1:stub}_screen
 	
+	.screen_name = '${1:stub}_screen'
 	.visible = 0
 
 
@@ -23,6 +25,8 @@ define group a_$1_screen
 
 	method init()
 		.refresh_layout()
+
+		.is_initialised = bool.true
 	end
 	
 
