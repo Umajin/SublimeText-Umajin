@@ -18,13 +18,13 @@
 			<key>comment</key>
 			<string>everything being a reserved word, not a value and needing a 'end' is a..</string>
 			<key>match</key>
-			<string>\b(define|instance|include|include_once|method|return|returns|if|else|elseif|loop|property|constant|end|event|raise|eval|delete|remove|tween|in)\b(?![?!])</string>
+			<string>\b(define|instance|include|include_once|method|return|returns|if|else|elseif|loop|property|constant|end|event|raise|eval|delete|remove|tween|in|switch|case)\b(?![?!])</string>
 			<key>name</key>
 			<string>keyword.control.umajin</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(int|int16|int32|int64|uint|uint8|uint16|uint32|uint64|real|real32|real64|float|bool|string|vec3|object)\b</string>
+			<string>\b(int|int16|int32|int64|uint|uint8|uint16|uint32|uint64|real|real32|real64|float|bool|true|false|string|vec3|object)\b</string>
 			<key>name</key>
 			<string>storage.type.umajin</string>
 		</dict>
@@ -56,13 +56,13 @@
 
 		<dict>
 			<key>match</key>
-			<string>\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))((e|E)(\+|-)?[0-9]+)?)(L|l|UL|ul|u|U|F|f)?\b</string>
+			<string>\b(0(x|X)[0-9a-fA-F]+)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))?\b</string>
 			<key>name</key>
 			<string>constant.numeric.umajin</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(println|print)</string>
+			<string>\b(println|print)</string>
 			<key>name</key>
 			<string>support.function.formatted_print.umajin</string>
 		</dict>

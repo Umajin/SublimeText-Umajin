@@ -20,7 +20,7 @@ instance unit_test ${1:stub}_screen_test
 			exists = 1
 		end
 
-		.assert(exists, '- ${1:stub} Screen exists')
+		.assert(exists, '- Existence - Screen exists')
 
 		delete test_${1:stub}_screen
 	end
@@ -29,13 +29,20 @@ instance unit_test ${1:stub}_screen_test
 		instance a_${1:stub}_screen test_${1:stub}_screen
 		end
 
-		.assert(test_${1:stub}_screen.visible == 0, '- ${1:stub} screen visibility')
+		.assert(test_${1:stub}_screen.visible == 0, '- Properties - visibility')
 		test_${1:stub}_screen.init()
-		.assert(test_${1:stub}_screen.visible == 0, '- ${1:stub} screen visibility')
+		.assert(test_${1:stub}_screen.visible == 0, '- Properties - visibility')
 		test_${1:stub}_screen.show()
-		.assert(test_${1:stub}_screen.visible, '- ${1:stub} screen visibility')
+		.assert(test_${1:stub}_screen.visible, '- Properties - visibility')
 
 		delete test_${1:stub}_screen
+	end
+	
+	method test_instances()
+		instance a_${1:stub}_screen test_${1:stub}_screen
+		end
+
+		//.assert(test_${1:stub}_screen.background, 'Instances')
 	end
 
 	method test_opening_twice()
@@ -43,14 +50,14 @@ instance unit_test ${1:stub}_screen_test
 		instance a_${1:stub}_screen test_${1:stub}_screen
 		end
 		test_${1:stub}_screen.init()
-		.assert(test_${1:stub}_screen.visible == 0, '- ${1:stub} screen visibility')
+		.assert(test_${1:stub}_screen.visible == 0, '- Open Twice - visibility')
 
 		int i = 0
 		loop i < 3
 			test_${1:stub}_screen.show()
-			.assert(test_${1:stub}_screen.visible, '- ${1:stub} screen visibility')
+			.assert(test_${1:stub}_screen.visible, '- Open Twice - visibility')
 			test_${1:stub}_screen.hide()
-			.assert(test_${1:stub}_screen.visible == 0, '- ${1:stub} screen visibility')
+			.assert(test_${1:stub}_screen.visible == 0, '- Open Twice - visibility')
 
 			i++
 		end
@@ -63,6 +70,7 @@ instance unit_test ${1:stub}_screen_test
 	method run_all_tests()
 		.test_exists()
 		.test_default_properties()
+		.test_instances()
 		.test_opening_twice()
 
 	end
