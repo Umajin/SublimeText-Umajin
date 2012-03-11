@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[method ${1:method_name}(${2:arguments}) 
+	${0:$TM_SELECTED_TEXT}
+end]]></content>
+	<tabTrigger>method</tabTrigger>
+	<scope>source.umajin</scope>
+	<description>Method (meth)</description>
+</snippet>

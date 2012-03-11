@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[int i = 0
+loop i < ${1}
+	${2}
+	
+	i++
+end]]></content>
+	<tabTrigger>loop</tabTrigger>
+	<scope>source.umajin</scope>
+	<description>loop</description>
+</snippet>
+
+
+

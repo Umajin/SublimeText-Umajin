@@ -1,0 +1,10 @@
+<snippet>
+	<content><![CDATA[if (${1:true}) 
+	${0:$TM_SELECTED_TEXT}
+else 
+	
+end]]></content>
+	<tabTrigger>ife</tabTrigger>
+	<scope>source.umajin</scope>
+	<description>if … else (ife)</description>
+</snippet>

@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[property ${1:type}[] ${2:array_name}
+end]]></content>
+	<tabTrigger>array_prop</tabTrigger>
+	<scope>source.umajin</scope>
+	<description>array property</description>
+</snippet>
