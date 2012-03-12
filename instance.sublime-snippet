@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[instance ${1:instance_type} ${2:instance_name} 
+	${3}
+end]]></content>
+	<tabTrigger>instance</tabTrigger>
+	<scope>source.umajin</scope>
+	<description>Instance</description>
+</snippet>
