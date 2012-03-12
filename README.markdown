@@ -5,7 +5,7 @@ A Umajin Bundle for [Sublime Text 2](http://www.sublimetext.com/2)
 
  - **Syntax highlighting** for umajin (.u) sources.
 
- Still to come:
+Still to come:
  - **Umajin engine completion**, code hints and error highlighting
  - **Class discovery/completion**
  - **Sublime build system integration**, multiple build management, including running tests
