@@ -10,7 +10,8 @@ Still to come:
  - **Umajin engine completion**, code hints and error highlighting
  - **Class discovery/completion**
  - **Sublime build system integration**, multiple build management, including running tests
- - Code snippets, auto-include
+ - Code snippets
+ - Auto-include
 
 # Installation
 
