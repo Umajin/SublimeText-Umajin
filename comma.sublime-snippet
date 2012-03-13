@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[, ', ${1}:', ${2}]]></content>
+	<tabTrigger>,</tabTrigger>
+	<scope>source.umajin</scope>
+	<description>print comma seperator</description>
+</snippet>

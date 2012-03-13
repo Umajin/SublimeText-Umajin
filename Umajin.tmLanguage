@@ -18,7 +18,7 @@
 			<key>comment</key>
 			<string>everything being a reserved word, not a value and needing a 'end' is a..</string>
 			<key>match</key>
-			<string>\b(define|instance|include|include_once|method|return|returns|if|else|elseif|loop|property|constant|end|event|raise|eval|delete|remove|tween|in|switch|case)\b(?![?!])</string>
+			<string>\b(define|instance|include|include_once|return|returns|if|else|elseif|loop|exitloop|property|constant|end|event|raise|eval|delete|remove|tween|in|switch|case)\b(?![?!])</string>
 			<key>name</key>
 			<string>keyword.control.umajin</string>
 		</dict>
@@ -183,8 +183,30 @@
 			<key>name</key>
 			<string>keyword.operator.symbolic.umajin</string>
 		</dict>
-
+		
 		<dict>
+			<!-- TODO: parse arguments with types. -->
+			<key>match</key>
+			<string>\b(method)\s+([a-zA-Z_]\w*)\s*</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.control.umajin</string>
+					<!-- <string>storage.type.function.umajin</string> -->
+				</dict>
+				
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.function.umajin</string>
+				</dict>
+			</dict>
+			
+		</dict>
+
+		<!--<dict>
 			<key>begin</key>
 			<string>\b(method)\s+([a-zA-Z_]\w*)\s*(\()</string>
 			<key>captures</key>
@@ -194,17 +216,20 @@
 					<key>name</key>
 					<string>storage.type.function.umajin</string>
 				</dict>
+				
 				<key>2</key>
 				<dict>
 					<key>name</key>
 					<string>entity.name.function.umajin</string>
 				</dict>
+				
 				<key>3</key>
 				<dict>
 					<key>name</key>
 					<string>punctuation.definition.parameters.begin.umajin</string>
 				</dict>
 			</dict>
+			
 			<key>end</key>
 			<string>\)</string>
 			<key>endCaptures</key>
@@ -215,6 +240,7 @@
 					<string>punctuation.definition.parameters.end.umajin</string>
 				</dict>
 			</dict>
+			
 			<key>name</key>
 			<string>meta.function.umajin</string>
 			<key>patterns</key>
@@ -226,7 +252,7 @@
 					<string>variable.parameter.function.umajin</string>
 				</dict>
 			</array>
-		</dict>
+		</dict>-->
 
 		
 		

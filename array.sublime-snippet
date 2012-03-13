@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[property ${1:type}[] ${2:array_name}
+	<content><![CDATA[property ${1:type} ${2:array_name}[]
 end]]></content>
 	<tabTrigger>array_prop</tabTrigger>
 	<scope>source.umajin</scope>

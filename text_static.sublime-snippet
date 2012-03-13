@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[instance text_static_2d ${1}
+	.x = ${2:0}
+	.y = ${3:0}
+	.width = ${4:400}
+	.height = ${5:50}
+	.style = g_styles.get_style('default')
+	.text = '${6}'
+end]]></content>
+	<tabTrigger>text_static</tabTrigger>
+	<scope>source.umajin</scope>
+	<description>text_static_2d instance</description>
+</snippet>
