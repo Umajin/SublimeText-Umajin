@@ -1,0 +1,23 @@
+<snippet>
+	<content><![CDATA[instance shape ${1:shape_name}
+	.hit_detection_mode = 0
+	.filled = 1
+	.stroke_color = color.white
+	.fill_color = color.white
+	.width = 100
+	.height = 100
+	
+	method redraw()
+		.clear()
+		.do_move(0,0)
+		.do_line(.width,0)
+		.do_line(.width,.height)
+		.do_line(0,.height)
+		.do_line(0,0)
+	end
+	.redraw()
+end]]></content>
+	<tabTrigger>shape</tabTrigger>
+	<scope>source.umajin</scope>
+	<description>Shape instance</description>
+</snippet>
