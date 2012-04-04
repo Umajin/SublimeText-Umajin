@@ -1,5 +1,5 @@
 {
-	"cmd": ["run_start.bat"],
+	"cmd": ["run_with_debug_gui.bat"],
 	"working_dir": "${project_path:default}",
 	"selector": "source.umajin"
 }
