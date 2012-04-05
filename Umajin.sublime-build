@@ -1,5 +1,5 @@
 {
-	"cmd": ["run_with_debug_gui.bat"],
+	"cmd": ["cmd", "/c", "umajin.exe --output=stdout --log-format=p:ti:t:d start.u | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe"],
 	"working_dir": "${project_path:default}",
 	"selector": "source.umajin"
 }

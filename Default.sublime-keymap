@@ -1,3 +1,5 @@
 [
-    { "keys": ["ctrl+enter"], "command": "build" }
+	{ "keys": ["ctrl+enter"], "command": "build" },
+	{ "keys": ["alt+r"], "command": "umajin_run" },
+	{ "keys": ["alt+t"], "command": "umajin_test_run" }
 ]

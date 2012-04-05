@@ -1,0 +1,15 @@
+[{
+  "id": "umajinmenu",
+  "caption": "Umajin",
+  "children": [{
+      "id": "umajinrun",
+      "caption": "Run Debug",
+      "command": "umajin_run"
+    },
+    {
+      "id": "umajintestrun",
+      "caption": "Run Tests",
+      "command": "umajin_test_run"
+    }
+  ] 
+}]

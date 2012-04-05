@@ -1,0 +1,8 @@
+[{
+  "caption": "Umajin::Run::Current File",
+  "command": "umajin_run"
+},
+{
+  "caption": "Umajin::Test::Run::Current File",
+  "command": "umajin_test_run"
+}]
