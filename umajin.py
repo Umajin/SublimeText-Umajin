@@ -111,7 +111,7 @@ class UmajinTextCommand(UmajinCommand, sublime_plugin.TextCommand):
 # Command to Run Umajin
 class UmajinRunCommand(UmajinTextCommand):
   def run(self, edit):
-    root_folder = self.get_working_dir()
+    root_folder = self.get_window().folders()[0]
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\start.u'
     command_string = umajin_exe+" --output=stdout --log-format=p:ti:t:d "+start_file+" | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe"
@@ -120,12 +120,9 @@ class UmajinRunCommand(UmajinTextCommand):
   
 class UmajinTestRunCommand(UmajinTextCommand):
   def run(self, edit):
-    root_folder = self.get_working_dir()
+    root_folder = self.get_window().folders()[0]
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\all_tests_runner.u'
     command_string = umajin_exe+" --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe"
     command = ["cmd", "/c", command_string]
     self.get_window().run_command("exec", {"cmd": command})
-  
-  def get_window(self):
-    return self.view.window() or sublime.active_window()
