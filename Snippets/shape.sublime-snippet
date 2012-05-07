@@ -18,6 +18,6 @@
 	.redraw()
 end]]></content>
 	<tabTrigger>shape</tabTrigger>
-	<scope>source.umajin</scope>
+	<scope>source.umajin.3</scope>
 	<description>Shape instance</description>
 </snippet>

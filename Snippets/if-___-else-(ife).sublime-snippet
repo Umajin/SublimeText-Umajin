@@ -5,6 +5,6 @@ else
 	
 end]]></content>
 	<tabTrigger>ife</tabTrigger>
-	<scope>source.umajin</scope>
+	<scope>source.umajin.3</scope>
 	<description>if … else (ife)</description>
 </snippet>

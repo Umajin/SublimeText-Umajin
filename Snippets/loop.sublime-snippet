@@ -6,7 +6,7 @@ loop i < ${1}
 	i++
 end]]></content>
 	<tabTrigger>loop</tabTrigger>
-	<scope>source.umajin</scope>
+	<scope>source.umajin.3</scope>
 	<description>loop</description>
 </snippet>
 

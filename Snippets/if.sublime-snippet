@@ -3,6 +3,6 @@
 	${0:$TM_SELECTED_TEXT}
 end]]></content>
 	<tabTrigger>if</tabTrigger>
-	<scope>source.umajin</scope>
+	<scope>source.umajin.3</scope>
 	<description>if</description>
 </snippet>

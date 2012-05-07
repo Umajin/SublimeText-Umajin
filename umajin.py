@@ -114,7 +114,7 @@ class UmajinRunCommand(UmajinTextCommand):
     root_folder = self.get_window().folders()[0]
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\start.u'
-    command_string = umajin_exe+" --output=stdout --log-format=p:ti:t:d "+start_file+" | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe"
+    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
     command = ["cmd", "/c", command_string]
     self.get_window().run_command("exec", {"cmd": command})
   
@@ -123,6 +123,18 @@ class UmajinTestRunCommand(UmajinTextCommand):
     root_folder = self.get_window().folders()[0]
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\all_tests_runner.u'
-    command_string = umajin_exe+" --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe"
+    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
+    command = ["cmd", "/c", command_string]
+    self.get_window().run_command("exec", {"cmd": command})
+  
+class UmajinRegressionTestRunCommand(UmajinTextCommand):
+  def run(self, edit):
+    # DEL test_runner.txt /Q
+    # UMAJIN.EXE --all-warnings --output=stdout --log-format=p:ti:t:d regression_runner.u -minimal | "C:\Umajin\Umajin3_debug_GUI\umajin3_debug_gui.exe" --stdout >test_runner.txt
+    root_folder = self.get_window().folders()[0]
+    umajin_exe = root_folder + '\\umajin.exe'
+    start_file = root_folder + '\\regression_runner.u'
+    # command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
+    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder+" --stdout >test_runner.txt"
     command = ["cmd", "/c", command_string]
     self.get_window().run_command("exec", {"cmd": command})

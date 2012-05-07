@@ -20,51 +20,51 @@
 			<key>match</key>
 			<string>\b(define|instance|include|include_once|return|returns|if|else|elseif|loop|exitloop|property|constant|end|event|raise|eval|delete|remove|tween|in|switch|case)\b(?![?!])</string>
 			<key>name</key>
-			<string>keyword.control.umajin</string>
+			<string>keyword.control.umajin.3</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(int|int16|int32|int64|uint|uint8|uint16|uint32|uint64|real|real32|real64|float|bool|true|false|string|vec3|object)\b</string>
 			<key>name</key>
-			<string>storage.type.umajin</string>
+			<string>storage.type.umajin.3</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(color|group|shape|visobj|timer_oneshot|timer_periodic|text_static_2d)\b</string>
 			<key>name</key>
-			<string>storage.type.umajin</string>
+			<string>storage.type.umajin.3</string>
 		</dict>
 
 		<dict>
 			<key>match</key>
 			<string>\b(system|window)\b</string>
 			<key>name</key>
-			<string>constant.language.umajin</string>
+			<string>constant.language.umajin.3</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(null)\b</string>
 			<key>name</key>
-			<string>constant.language.umajin</string>
+			<string>constant.language.umajin.3</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(g_)([a-zA-Z_]\w*)\s*</string>
 			<key>name</key>
-			<string>constant.language.umajin</string>
+			<string>constant.language.umajin.3</string>
 		</dict>
 
 		<dict>
 			<key>match</key>
 			<string>\b(0(x|X)[0-9a-fA-F]+)|(([0-9]+\.?[0-9]*)|(\.[0-9]+))?\b</string>
 			<key>name</key>
-			<string>constant.numeric.umajin</string>
+			<string>constant.numeric.umajin.3</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>\b(println|print)</string>
 			<key>name</key>
-			<string>support.function.formatted_print.umajin</string>
+			<string>support.function.formatted_print.umajin.3</string>
 		</dict>
 
 
@@ -74,7 +74,7 @@
 			<key>match</key>
 			<string>\b(length|clear|dot_product|distance_squared|distance|keys|values|to_monochrome|to_grey_scale|to_gray_scale|to_sepia|format|now|now_gmt|year|month|day|hour|minute|second|weekday|yearday|date|time|today|today_gmt|time_t|time_t_gmt|normalize|concat|left|right|mid|trim|ltrim|rtrim|length|split|dsplit|join|instr|instrrev|replace|md5|crc32|save_as|save_string|save_unicode_string|save_binary_string|load|load_string|load_unicode_string|lorem_ipsum|json|quote|unquote|url_encode|url_decode|xml_encode|xml_decode|basename|dirname|extension|fullpath|encrypt|decrypt|inverse|is_infinity|is_nan|abs|sin|cos|tan|asin|acos|atan|atan2|exp|log|sign|sinh|cosh|tanh|lobyte|hibyte|loword|hiword|max|min|sum|is_online|message_box|sleep|to_radians|to_degrees|floor|ceil|round|rand|sqrt|pow|trim|instr|pos|lower|upper|split|#line_numbers|#no_line_numbers|typeof|nameof)\b</string>
 			<key>name</key>
-			<string>support.function.umajin</string>
+			<string>support.function.umajin.3</string>
 		</dict>
 
 
@@ -87,7 +87,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin.umajin</string>
+					<string>punctuation.definition.string.begin.umajin.3</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -97,18 +97,18 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.end.umajin</string>
+					<string>punctuation.definition.string.end.umajin.3</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.double.umajin</string>
+			<string>string.quoted.double.umajin.3</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
 					<string>\\.</string>
 					<key>name</key>
-					<string>constant.character.escape.umajin</string>
+					<string>constant.character.escape.umajin.3</string>
 				</dict>
 			</array>
 		</dict>
@@ -120,7 +120,7 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.begin.umajin</string>
+					<string>punctuation.definition.string.begin.umajin.3</string>
 				</dict>
 			</dict>
 			<key>end</key>
@@ -130,18 +130,18 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.string.end.umajin</string>
+					<string>punctuation.definition.string.end.umajin.3</string>
 				</dict>
 			</dict>
 			<key>name</key>
-			<string>string.quoted.single.umajin</string>
+			<string>string.quoted.single.umajin.3</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
 					<string>\\.</string>
 					<key>name</key>
-					<string>constant.character.escape.umajin</string>
+					<string>constant.character.escape.umajin.3</string>
 				</dict>
 			</array>
 		</dict>
@@ -154,13 +154,13 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.umajin</string>
+					<string>punctuation.definition.comment.umajin.3</string>
 				</dict>
 			</dict>
 			<key>end</key>
 			<string>\*/</string>
 			<key>name</key>
-			<string>comment.block.umajin</string>
+			<string>comment.block.umajin.3</string>
 		</dict>
 		<dict>
 			<key>captures</key>
@@ -168,20 +168,20 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.comment.umajin</string>
+					<string>punctuation.definition.comment.umajin.3</string>
 				</dict>
 			</dict>
 			<key>match</key>
 			<string>(//).*$\n?</string>
 			<key>name</key>
-			<string>comment.line.double-slash.umajin</string>
+			<string>comment.line.double-slash.umajin.3</string>
 		</dict>
 
 		<dict>
 			<key>match</key>
 			<string>[-!%&amp;&lt;&gt;*+=/\|]</string>
 			<key>name</key>
-			<string>keyword.operator.symbolic.umajin</string>
+			<string>keyword.operator.symbolic.umajin.3</string>
 		</dict>
 		
 		<dict>
@@ -193,14 +193,14 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>keyword.control.umajin</string>
-					<!-- <string>storage.type.function.umajin</string> -->
+					<string>keyword.control.umajin.3</string>
+					<!-- <string>storage.type.function.umajin.3</string> -->
 				</dict>
 				
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.umajin</string>
+					<string>entity.name.function.umajin.3</string>
 				</dict>
 			</dict>
 			
@@ -214,19 +214,19 @@
 				<key>1</key>
 				<dict>
 					<key>name</key>
-					<string>storage.type.function.umajin</string>
+					<string>storage.type.function.umajin.3</string>
 				</dict>
 				
 				<key>2</key>
 				<dict>
 					<key>name</key>
-					<string>entity.name.function.umajin</string>
+					<string>entity.name.function.umajin.3</string>
 				</dict>
 				
 				<key>3</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.begin.umajin</string>
+					<string>punctuation.definition.parameters.begin.umajin.3</string>
 				</dict>
 			</dict>
 			
@@ -237,19 +237,19 @@
 				<key>0</key>
 				<dict>
 					<key>name</key>
-					<string>punctuation.definition.parameters.end.umajin</string>
+					<string>punctuation.definition.parameters.end.umajin.3</string>
 				</dict>
 			</dict>
 			
 			<key>name</key>
-			<string>meta.function.umajin</string>
+			<string>meta.function.umajin.3</string>
 			<key>patterns</key>
 			<array>
 				<dict>
 					<key>match</key>
 					<string>[^,)\n]+</string>
 					<key>name</key>
-					<string>variable.parameter.function.umajin</string>
+					<string>variable.parameter.function.umajin.3</string>
 				</dict>
 			</array>
 		</dict>-->
@@ -261,7 +261,7 @@
 
 	</array>
 	<key>scopeName</key>
-	<string>source.umajin</string>
+	<string>source.umajin.3</string>
 	<key>uuid</key>
 	<string>9029406f-49b9-44c5-824b-a09fed48aff8</string>
 </dict>

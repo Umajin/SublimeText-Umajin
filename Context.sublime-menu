@@ -10,6 +10,11 @@
       "id": "umajintestrun",
       "caption": "Run Tests",
       "command": "umajin_test_run"
+    },
+    {
+      "id": "umajinregressiontestrun",
+      "caption": "Run Regression Tests",
+      "command": "umajin_regression_test_run"
     }
   ] 
 }]

@@ -5,4 +5,8 @@
 {
   "caption": "Umajin::Test::Run::Current File",
   "command": "umajin_test_run"
+}
+{
+  "caption": "Umajin::Regression_Test::Run::Current File",
+  "command": "umajin_regression_test_run"
 }]

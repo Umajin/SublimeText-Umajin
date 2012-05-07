@@ -1,5 +1,5 @@
 {
-	"cmd": ["cmd", "/c", "umajin.exe --output=stdout --log-format=p:ti:t:d start.u | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe"],
+	"cmd": ["cmd", "/c", "umajin.exe --output=stdout --log-format=p:ti:t:d start.u | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r ${project_path:default}"],
 	"working_dir": "${project_path:default}",
-	"selector": "source.umajin"
+	"selector": "source.umajin.3"
 }

@@ -3,6 +3,6 @@
 	${3}
 end]]></content>
 	<tabTrigger>define</tabTrigger>
-	<scope>source.umajin</scope>
+	<scope>source.umajin.3</scope>
 	<description>Define</description>
 </snippet>

@@ -8,6 +8,6 @@
 	.text = '${6}'
 end]]></content>
 	<tabTrigger>text_static</tabTrigger>
-	<scope>source.umajin</scope>
+	<scope>source.umajin.3</scope>
 	<description>text_static_2d instance</description>
 </snippet>

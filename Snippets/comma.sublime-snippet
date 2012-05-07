@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[, ', ${1}:', ${2}]]></content>
 	<tabTrigger>,</tabTrigger>
-	<scope>source.umajin</scope>
+	<scope>source.umajin.3</scope>
 	<description>print comma seperator</description>
 </snippet>

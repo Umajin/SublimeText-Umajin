@@ -3,6 +3,6 @@
 	${0:$TM_SELECTED_TEXT}
 end]]></content>
 	<tabTrigger>method</tabTrigger>
-	<scope>source.umajin</scope>
+	<scope>source.umajin.3</scope>
 	<description>Method (meth)</description>
 </snippet>

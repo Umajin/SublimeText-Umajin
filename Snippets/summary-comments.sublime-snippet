@@ -2,6 +2,6 @@
 	<content><![CDATA[/// <summary> ${1} </summary>
 ]]></content>
 	<tabTrigger>summary</tabTrigger>
-	<scope>source.umajin</scope>
+	<scope>source.umajin.3</scope>
 	<description>Summary comment</description>
 </snippet>
