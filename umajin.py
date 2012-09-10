@@ -104,6 +104,10 @@ class UmajinTextCommand(UmajinCommand, sublime_plugin.TextCommand):
     # the case of the quick panel.
     # So, this is not necessarily ideal, but it does work.
     return self.view.window() or sublime.active_window()
+    
+  def get_root_folder(self):
+    root_folder = self.get_window().folders()[0]
+    return root_folder
 
 
 ### Run Commands ###
@@ -111,7 +115,7 @@ class UmajinTextCommand(UmajinCommand, sublime_plugin.TextCommand):
 # Command to Run Umajin
 class UmajinRunCommand(UmajinTextCommand):
   def run(self, edit):
-    root_folder = self.get_window().folders()[0]
+    root_folder = self.get_root_folder()
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\start.u'
     command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
@@ -120,7 +124,7 @@ class UmajinRunCommand(UmajinTextCommand):
   
 class UmajinTestRunCommand(UmajinTextCommand):
   def run(self, edit):
-    root_folder = self.get_window().folders()[0]
+    root_folder = self.get_root_folder()
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\all_tests_runner.u'
     command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
@@ -131,7 +135,7 @@ class UmajinRegressionTestRunCommand(UmajinTextCommand):
   def run(self, edit):
     # DEL test_runner.txt /Q
     # UMAJIN.EXE --all-warnings --output=stdout --log-format=p:ti:t:d regression_runner.u -minimal | "C:\Umajin\Umajin3_debug_GUI\umajin3_debug_gui.exe" --stdout >test_runner.txt
-    root_folder = self.get_window().folders()[0]
+    root_folder = self.get_root_folder()
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\regression_runner.u'
     # command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
