@@ -108,6 +108,11 @@ class UmajinTextCommand(UmajinCommand, sublime_plugin.TextCommand):
   def get_root_folder(self):
     root_folder = self.get_window().folders()[0]
     #TODO: If no umajin.exe in root_folder, then try finding it starting in current files dir, then back through parent dirs.
+    
+    # custom_exe_path = view.settings().get('umajin_exe_path')
+    # custom_exe_path = sublime.load_settings("Umajin.sublime-settings").get('umajin_exe_path')
+    # if (not custom_exe_path):
+    #   root_folder = custom_exe_path
     return root_folder
 
 
