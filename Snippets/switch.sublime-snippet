@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[switch ${1:$TM_SELECTED_TEXT}
+	case ${2}
+		${3}
+end]]></content>
+	<tabTrigger>switch</tabTrigger>
+	<scope>source.umajin.3</scope>
+	<description>switch</description>
+</snippet>
