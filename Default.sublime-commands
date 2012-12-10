@@ -3,6 +3,14 @@
   "command": "umajin_run"
 },
 {
+  "caption": "Umajin::Metro::Run::Current File",
+  "command": "umajin_metro_run"
+},
+{
+  "caption": "Umajin::Debug_Gui::Run::Current File",
+  "command": "umajin_debug_gui_run"
+},
+{
   "caption": "Umajin::Test::Run::Current File",
   "command": "umajin_test_run"
 },

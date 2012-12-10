@@ -1,6 +1,8 @@
 [
 	{ "keys": ["ctrl+enter"], "command": "build" },
 	{ "keys": ["alt+r"], "command": "umajin_run" },
+	{ "keys": ["alt+shift+r"], "command": "umajin_metro_run" },
+	{ "keys": ["alt+shift+d"], "command": "umajin_debug_gui_run" },
 	{ "keys": ["alt+t"], "command": "umajin_test_run" },
 	{ "keys": ["ctrl+alt+t"], "command": "umajin_regression_test_run" }
 ]

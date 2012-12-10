@@ -124,16 +124,31 @@ class UmajinRunCommand(UmajinTextCommand):
     root_folder = self.get_root_folder()
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\start.u'
-    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
+    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" | C:\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
     command = ["cmd", "/c", command_string]
     self.get_window().run_command("exec", {"cmd": command})
-  
+    
+# Command to Run Umajin in Metro
+class UmajinMetroRunCommand(UmajinTextCommand):
+  def run(self, edit):
+    root_folder = self.get_root_folder()
+    command = ["cmd", "/c", "C:\\Users\\adamh\\Documents\\Dev\\Projects\\UnlimitedRealities\\UmajinAppBuilder\\umajin_app_builder\\app_builder.url"]
+    self.get_window().run_command("exec", {"cmd": command})
+    
+# Command to Run Umajin in Metro
+class UmajinDebugGuiRunCommand(UmajinTextCommand):
+  def run(self, edit):
+    root_folder = self.get_root_folder()
+    command_string = "umajin3_debug_gui.exe -x -e C:\\Users\\adamh\\AppData\\Local\\Packages\\umajin_kfxajk8fbbyc2\\LocalState\\messages.txt -s 127.0.0.1 -r "+root_folder
+    command = ["cmd", "/c", command_string]
+    self.get_window().run_command("exec", {"cmd": command})
+
 class UmajinTestRunCommand(UmajinTextCommand):
   def run(self, edit):
     root_folder = self.get_root_folder()
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\all_tests_runner.u'
-    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
+    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
     command = ["cmd", "/c", command_string]
     self.get_window().run_command("exec", {"cmd": command})
   
@@ -145,6 +160,6 @@ class UmajinRegressionTestRunCommand(UmajinTextCommand):
     umajin_exe = root_folder + '\\umajin.exe'
     start_file = root_folder + '\\regression_runner.u'
     # command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
-    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder+" --stdout >test_runner.txt"
+    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder+" --stdout >test_runner.txt"
     command = ["cmd", "/c", command_string]
     self.get_window().run_command("exec", {"cmd": command})
