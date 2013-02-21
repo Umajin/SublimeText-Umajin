@@ -1,5 +1,5 @@
 <snippet>
-	<content><![CDATA[instance ${1:instance_type} ${2:instance_name} 
+	<content><![CDATA[instance ${1:group} ${2:instance_name} 
 	${3}
 end]]></content>
 	<tabTrigger>instance</tabTrigger>
