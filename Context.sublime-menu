@@ -7,6 +7,11 @@
       "command": "umajin_run"
     },
     {
+      "id": "umajinfilerun",
+      "caption": "Run File Debug",
+      "command": "umajin_file_run"
+    },
+    {
       "id": "umajintestrun",
       "caption": "Run Tests",
       "command": "umajin_test_run"

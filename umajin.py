@@ -127,7 +127,17 @@ class UmajinRunCommand(UmajinTextCommand):
     command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" | C:\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
     command = ["cmd", "/c", command_string]
     self.get_window().run_command("exec", {"cmd": command})
-    
+ 
+# Command to Run Umajin file
+class UmajinFileRunCommand(UmajinTextCommand):
+  def run(self, edit):
+    root_folder = self.get_root_folder()
+    umajin_exe = root_folder + '\\umajin.exe';
+    start_file = self.view.file_name() # root_folder + '\\start.u'
+    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" | C:\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
+    command = ["cmd", "/c", command_string]
+    self.get_window().run_command("exec", {"cmd": command})
+
 # Command to Run Umajin in Metro
 class UmajinMetroRunCommand(UmajinTextCommand):
   def run(self, edit):
