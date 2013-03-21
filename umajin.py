@@ -157,8 +157,9 @@ class UmajinTestRunCommand(UmajinTextCommand):
   def run(self, edit):
     root_folder = self.get_root_folder()
     umajin_exe = root_folder + '\\umajin.exe'
-    start_file = root_folder + '\\all_tests_runner.u'
-    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
+    start_file = root_folder + '\\run_tests.u'
+    # command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" -minimal | C:\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
+    command_string = umajin_exe+" --all-warnings --output=stdout --log-format=p:ti:t:d "+start_file+" | C:\\Umajin3_debug_GUI\\umajin3_debug_gui.exe -r "+root_folder
     command = ["cmd", "/c", command_string]
     self.get_window().run_command("exec", {"cmd": command})
   
