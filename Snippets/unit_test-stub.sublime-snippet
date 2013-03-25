@@ -1,0 +1,55 @@
+<snippet>
+	<content><![CDATA[
+include_once 'app/widgets/${1:stub}.u'
+
+
+define unit_test test_${1:stub}_def
+	.set_name('${1:stub}')
+	
+	
+	method test_exists() 
+		string test_prefix = 'Existence: '
+		
+		instance ${1:stub} test_obj 
+		end
+		
+		.assert(test_obj, 'instance exists')
+		.expect_string(test_obj.typeof(), '${1:stub}', test_prefix + 'correct type')
+		
+		g_tools.delete_object( test_obj )
+	end
+	
+	method test_default_properties() 
+		string test_prefix = 'Default properties: '
+		
+		instance ${1:stub} test_obj
+		end
+		
+		.expect_string(test_obj.filename, '', 'filename')
+		.expect_int(test_obj.x, 0, 'x')
+		.expect_int(test_obj.y, 0, 'y')
+		.expect_int(test_obj.width, 0, 'width')
+		.expect_int(test_obj.height, 0, 'height')
+		
+		g_tools.delete_object( test_obj )
+	end
+
+
+
+	method run_all_tests()
+		.test_exists()
+		.test_default_properties()
+		
+		.finished = 1
+	end
+end
+
+instance test_${1:stub}_def test_${1:stub}
+end
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>test</tabTrigger>
+	<scope>source.umajin.3</scope>
+	<description>Unit test stub</description>
+</snippet>
