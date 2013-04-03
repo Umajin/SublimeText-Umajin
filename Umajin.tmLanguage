@@ -24,7 +24,7 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>\b(int|int16|int32|int64|uint|uint8|uint16|uint32|uint64|real|real32|real64|float|bool|true|false|string|vec3|object|array|list)\b</string>
+			<string>\b(int|int16|int32|int64|uint|uint8|uint16|uint32|uint64|real|real32|real64|float|bool|true|false|string|vec3|object|array|list|map)\b</string>
 			<key>name</key>
 			<string>storage.type.umajin.3</string>
 		</dict>
