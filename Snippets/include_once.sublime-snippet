@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[include_once '${1}']]></content>
+	<tabTrigger>include</tabTrigger>
+	<scope>source.umajin.3</scope>
+	<description>Include</description>
+</snippet>
