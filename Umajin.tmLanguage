@@ -18,7 +18,7 @@
 			<key>comment</key>
 			<string>everything being a reserved word, not a value and needing a 'end' is a..</string>
 			<key>match</key>
-			<string>\b(define|instance|include|include_once|return|returns|if|else|elseif|loop|exitloop|property|constant|end|event|raise|eval|delete|remove|tween|in|switch|case)\b(?![?!])</string>
+			<string>\b(define|instance|include|include_once|return|returns|if|else|elseif|loop|exitloop|property|constant|end|event|raise|eval|delete|remove|tween|in|switch|case|override)\b(?![?!])</string>
 			<key>name</key>
 			<string>keyword.control.umajin.3</string>
 		</dict>
