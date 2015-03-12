@@ -20,14 +20,14 @@ The bundle is available through [Package Control](http://wbond.net/sublime_packa
 
 ### Mac OSX
     cd /Users/<username>/Library/Application\ Support/Sublime\ Text\ 2/Packages
-    git clone git://github.com/<fork author>/umajin-sublime2-bundle.git Umajin
+    git clone https://github.com/AdamHarte/SublimeText-Umajin.git Umajin
 ### Linux
     cd ~/.config/sublime-text-2/Packages
-    git clone git://github.com/<fork author>/umajin-sublime2-bundle.git Umajin
+    git clone https://github.com/AdamHarte/SublimeText-Umajin.git Umajin
 ### Windows
     (Using git bash http://code.google.com/p/msysgit/)
     cd /c/Users/<username>/AppData/Roaming/Sublime\ Text\ 2/Packages
-    git clone git://github.com/<fork author>/umajin-sublime2-bundle.git Umajin
+    git clone https://github.com/AdamHarte/SublimeText-Umajin.git Umajin
 
 Restart Sublime Text 2
 
